@@ -8,7 +8,7 @@ function MessagesDisplay({messages}) {
   // 🐨 replace useEffect with useLayoutEffect
   React.useEffect(() => {
     containerRef.current.scrollTop = containerRef.current.scrollHeight
-  })
+  }, [messages])
 
   return (
     <div ref={containerRef} role="log">

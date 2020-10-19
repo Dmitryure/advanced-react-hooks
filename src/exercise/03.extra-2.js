@@ -37,9 +37,7 @@ const PokemonCacheProvider = props => {
   }
 
   return (
-    <PokemonCacheContext.Provider value={{cachedPokemons, cachePokemon}}>
-      {props.children}
-    </PokemonCacheContext.Provider>
+    <PokemonCacheContext.Provider value={{cachedPokemons, cachePokemon}} {...props}/>
   )
 }
 // 🐨 useReducer with pokemonCacheReducer in your PokemonCacheProvider
